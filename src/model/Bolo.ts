@@ -4,7 +4,7 @@ export class Bolo extends Produto {
     private _validade: number;
 
 
-	constructor(validade: number, id: number, nome: string, preco: number, descricao: string, tipo: number, estoque: number) {
+	constructor(id: number, nome: string, preco: number, descricao: string, tipo: number, estoque: number, validade: number) {
         super(id, nome, preco, descricao, tipo, estoque);
 		this._validade = validade;
 	}

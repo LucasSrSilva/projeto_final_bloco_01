@@ -64,23 +64,23 @@ export abstract class Produto {
         this._estoque = value;
     }
 
-    public comprar(quantidade: number): void {
-        this._estoque -= quantidade;
-    }
+    // public comprar(quantidade: number): void {
+    //     this._estoque -= quantidade;
+    // }
 
-    public adicionarEstoque(quantidade: number){
-        this._estoque += quantidade;
-    }
+    // public adicionarEstoque(quantidade: number){
+    //     this._estoque += quantidade;
+    // }
 
     public vizualizar() {
         let tipo: string;
 
         switch(this._tipo){
             case 1:
-                tipo = "Doce";
+                tipo = "Pão";
                 break;
             case 2:
-                tipo = "Salgado";
+                tipo = "Bolo";
                 break;
             default:
                 throw new Error("Há um problema no Tipo de produto");
@@ -90,10 +90,10 @@ export abstract class Produto {
         console.log("                  Informações do produto:                ");
         console.log("\n*****************************************************\n");
         console.log("ID do produto: " + this._id);
+        console.log("Nome: " + this._nome);
         console.log("Descrição do produto: " + this.descricao);
         console.log("Estoque: " + this._estoque);
-        console.log("Tipo de produto: " + this._tipo);
-        console.log("Nome: " + this._nome);
+        console.log("Tipo de produto: " + tipo);
         console.log("Preço: " + this._preco.toFixed(2));
     }
 }

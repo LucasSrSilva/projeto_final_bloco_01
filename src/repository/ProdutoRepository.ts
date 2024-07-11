@@ -5,8 +5,8 @@ export interface ProdutoRepository {
     listarPorId(id: number): void;
     cadastrarProduto(produto: Produto): void;
     atualizarProduto(produto: Produto): void;
-    deletarProduto(produto: Produto): void;
+    deletarProduto(id: number): void;
 
-    comprar(id: number): void;
-    adicionarEstoque(id: number): void;
+    // comprar(id: number): void;
+    // adicionarEstoque(id: number): void;
 }

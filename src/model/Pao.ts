@@ -4,7 +4,7 @@ export class Pao extends Produto {
     private _quente: boolean;
 
 
-	constructor(quente: boolean, id: number, nome: string, preco: number, descricao: string, tipo: number, estoque: number) {
+	constructor(id: number, nome: string, preco: number, descricao: string, tipo: number, estoque: number, quente: boolean) {
         super(id, nome, preco, descricao, tipo, estoque);
 		this._quente = quente;
 	}
