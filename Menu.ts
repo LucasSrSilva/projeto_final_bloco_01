@@ -1,11 +1,18 @@
 import { LOADIPHLPAPI } from "dns";
 import { colors } from "./src/util/Colors";
 import rl = require("readline-sync");
+import { Pao } from "./src/model/Pao";
 
 export function main(): void {
     let loop: boolean = true;
     let opcao: number;
 
+    const pao1 = new Pao(true, 1, "Pão francês", 1.00, "Gostoso saboroso", 1, 10);
+    pao1.vizualizar();
+    pao1.adicionarEstoque(10);
+    pao1.comprar(2);
+    pao1.vizualizar();
+    
     console.log(colors.fg.green);
     console.log("*************************************************************");
     console.log("                                                             ");
